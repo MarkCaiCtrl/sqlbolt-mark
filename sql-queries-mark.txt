@@ -18,3 +18,12 @@ limit 2
 where country = "United States"
 order by population desc
 limit 2 offset 2
+
+EXERCISE 2
+
+1.SELECT director, count(title) FROM movies
+group by director
+
+2.SELECT director, sum(domestic_sales + international_sales) FROM movies
+inner join Boxoffice as b on id = b.Movie_id
+group by Director
