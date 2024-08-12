@@ -1,0 +1,48 @@
+1.A mailing list of an illegal online service was sent to the SQLPD hot-line. Please submit all entries' details.
+Q: SELECT *
+FROM mailing_
+list;
+
+2. An illegal site's servers were seized in a recent operation. Please submit all users email addresses and first names' details.
+Q: SELECT FirstName, EmailAddress
+FROM users;
+
+3. A mailing list of an illegal online service was sent to the SQLPD hot-line. Please submit all records emails, given names and last names' details.
+Q: SELECT Email, GivenName, LastName
+FROM mailing_ list;
+
+4. An illegal site's servers were seized in a recent operation. Please submit all users email addresses' details. Please make sure there are no duplicates.
+Q: SELECT DISTINCT EmailAddress
+FROM users;
+
+5. A hacked site subscribers' details have surfaced on a darknet forum. Please submit all subscribers' details sorted by hashed passwords in ascending order.
+Q: SELECT *
+FROM subscribers
+ORDER BY HashedPassword;
+
+6. White hat hacker has sent SQLPD exposed subscribers' details of a shady site connected to various persons of interest. Please submit all subscribers' details sorted by hashed passwords in descending order.
+Q: SELECT *
+FROM subscribers
+ORDER BY HashedPassword DESC;
+
+7. An illegal site's servers were seized in a recent operation. Please submit all users emails and number of downloads' details sorted by number of downloads in descending order. Please make sure there are no duplicates.
+Q: SELECT DISTINCT Email, Downloads
+FROM users
+ORDER BY Downloads DESC;
+
+8. A mailing list of an illegal online service was sent to the SQLPD hot-line. Please submit all entries email addresses and surnames' details sorted by surnames in ascending order and then by email addresses in ascending order.
+Q: SELECT EmailAddress, Surname
+FROM mailing_ list
+ORDER BY Surname, EmailAddress;
+
+9. An illegal site's servers were seized in a recent operation. Please submit the top 20 users' details when sorted by first names in ascending order and then by last access times in descending order.
+Q: SELECT *
+FROM users
+ORDER BY FirstName ASC, LastAccess DESC
+LIMIT 20; |
+
+10. An illegal site's servers were seized in a recent operation. Please submit the top 5 users number of downloads, given names and access times' details when sorted by given names in descending order and then by access times in descending order. Please make sure there are no duplicates.
+Q: SELECT DISTINCT GivenName, NumberOfDownloads, AccessTime
+FROM users
+ORDER BY GivenName DESC, AccessTime DESC
+LIMIT 5;
